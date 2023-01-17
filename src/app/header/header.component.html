@@ -1,5 +1,5 @@
 <header class="main-header">
-  <h1 class="main-header__title">
+  <h1 routerLink="/" class="main-header__title">
     <span class="main-header__title--blue">ProWay</span
     ><span class="main-header__title--orange">Computers</span>
   </h1>
@@ -10,10 +10,12 @@
           <a>Produtos</a>
         </li>
         <li>
-          <a>
+          <a routerLink="carrinho">
             <i class="fa-solid fa-cart-shopping"></i>
             Carrinho
-            <span class="badge-carrinho"></span>
+            <span class="badge-carrinho">
+              {{ CarrinhoService.obtemCarrinho().length }}
+            </span>
           </a>
         </li>
         <li><a>Contato</a></li>
